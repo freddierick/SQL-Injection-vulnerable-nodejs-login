@@ -129,6 +129,6 @@ app.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
-app.listen(3283, '0.0.0.0', () => {
-    console.log("App is online");
+app.listen(process.env.webapp_port, '0.0.0.0', () => {
+    console.log(`App is online on port ${process.env.webapp_port}`);
 });
